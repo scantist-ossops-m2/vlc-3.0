@@ -2,7 +2,7 @@
  * matroska_segment.cpp : matroska demuxer
  *****************************************************************************
  * Copyright (C) 2003-2010 VLC authors and VideoLAN
- * $Id$
+ * $Id: 75dfb3abd1ba013adb844e1ba07348ef42d97014 $
  *
  * Authors: Laurent Aimar <fenrir@via.ecp.fr>
  *          Steve Lhomme <steve.lhomme@free.fr>
@@ -535,8 +535,6 @@ bool matroska_segment_c::CompareSegmentUIDs( const matroska_segment_c * p_item_a
         return false;
 
     p_tmp = static_cast<EbmlBinary *>( p_item_a->p_segment_uid );
-    if ( !p_tmp )
-        return false;
     if ( p_item_b->p_prev_segment_uid != NULL
           && *p_tmp == *p_item_b->p_prev_segment_uid )
         return true;
